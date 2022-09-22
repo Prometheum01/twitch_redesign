@@ -39,52 +39,68 @@ class _SignInViewState extends SignInViewModel {
                     style: context.textTheme.bodySmall,
                   ),
                 ),
-                TextFieldWithLabel(
-                  controller: emailController,
-                  label: Text(
-                    StringData.email,
-                    style: context.textTheme.bodySmall?.copyWith(
-                      fontSize: 16,
-                    ),
-                  ),
-                  icon: const Icon(Icons.email_outlined, color: Colors.black),
-                  textStyle: context.textTheme.bodySmall?.copyWith(
-                    fontSize: 16,
-                  ),
-                  onChanged: (String value) {
-                    print(value);
-                  },
-                ),
-                Padding(
-                  padding: const ProjectPaddings.largeVertical(),
-                  child: TextFieldWithLabel(
-                    controller: passwordController,
-                    label: Text(
-                      StringData.password,
-                      style: context.textTheme.bodySmall?.copyWith(
-                        fontSize: 16,
+                Form(
+                  key: formKey,
+                  child: Column(
+                    children: [
+                      TextFieldWithLabel(
+                        controller: emailController,
+                        label: Text(
+                          StringData.email,
+                          style: context.textTheme.bodySmall?.copyWith(
+                            fontSize: 16,
+                          ),
+                        ),
+                        validator: ((value) {
+                          if (!value.isValidEmail) return 'Please write email';
+                        }),
+                        icon: const Icon(Icons.email_outlined,
+                            color: Colors.black),
+                        textStyle: context.textTheme.bodySmall?.copyWith(
+                          fontSize: 16,
+                        ),
+                        onChanged: (String value) {
+                          print(value);
+                        },
                       ),
-                    ),
-                    icon: const Icon(Icons.password_outlined,
-                        color: Colors.black),
-                    suffix: IconButton(
-                      onPressed: () {
-                        changePasswordVisibility();
-                      },
-                      icon: Icon(
-                        isVisible
-                            ? Icons.visibility_outlined
-                            : Icons.visibility_off_outlined,
-                        color: Colors.black,
+                      Padding(
+                        padding: const ProjectPaddings.largeVertical(),
+                        child: TextFieldWithLabel(
+                          controller: passwordController,
+                          label: Text(
+                            StringData.password,
+                            style: context.textTheme.bodySmall?.copyWith(
+                              fontSize: 16,
+                            ),
+                          ),
+                          validator: ((value) {
+                            if (!value.isValidPassword) {
+                              return 'Write strong password';
+                            }
+                          }),
+                          icon: const Icon(Icons.password_outlined,
+                              color: Colors.black),
+                          suffix: IconButton(
+                            onPressed: () {
+                              changePasswordVisibility();
+                            },
+                            icon: Icon(
+                              isVisible
+                                  ? Icons.visibility_outlined
+                                  : Icons.visibility_off_outlined,
+                              color: Colors.black,
+                            ),
+                          ),
+                          isSecure: !isVisible,
+                          textStyle: context.textTheme.bodySmall?.copyWith(
+                            fontSize: 16,
+                          ),
+                          onChanged: (String value) {
+                            print(value);
+                          },
+                        ),
                       ),
-                    ),
-                    isSecure: !isVisible,
-                    textStyle: context.textTheme.bodySmall?.copyWith(
-                      fontSize: 16,
-                    ),
-                    onChanged: (String value) {
-                      print(value);
-                    },
+                    ],
                   ),
                 ),
                 Row(
@@ -110,7 +126,9 @@ class _SignInViewState extends SignInViewModel {
                       'Sign In',
                       style: context.textTheme.bodyMedium,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      checkValidator();
+                    },
                     backgroundColor: ColorData.purplishBlue,
                   ),
                 ),

@@ -12,6 +12,7 @@ class TextFieldWithLabel extends Column {
     bool isSecure = false,
     Widget? suffix,
     required textStyle,
+    required String? Function(String? value) validator,
     required void Function(String value) onChanged,
   }) : super(
           key: key,
@@ -31,6 +32,9 @@ class TextFieldWithLabel extends Column {
                   icon: icon,
                   isSecure: isSecure,
                   suffix: suffix,
+                  validator: (value) {
+                    return validator(value);
+                  },
                   style: textStyle,
                   listener: (String value) {
                     onChanged.call(value);
@@ -49,6 +53,7 @@ class CustomTextFormField extends TextFormField {
     required Widget icon,
     required TextStyle? style,
     required void Function(String value) listener,
+    required String? Function(String? value) validator,
     bool isSecure = false,
     Widget? suffix,
   }) : super(
@@ -57,6 +62,9 @@ class CustomTextFormField extends TextFormField {
           controller: controller,
           onChanged: (String value) {
             listener.call(value);
+          },
+          validator: (String? value) {
+            return validator(value);
           },
           obscureText: isSecure,
           autocorrect: !isSecure,
