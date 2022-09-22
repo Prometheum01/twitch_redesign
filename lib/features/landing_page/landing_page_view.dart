@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 import 'package:twitch_design/core/const/paddings.dart';
+import 'package:twitch_design/features/sign_in_page/view/sign_in_view.dart';
 import 'package:twitch_design/product/const/color_data.dart';
 import 'package:twitch_design/product/const/image_paths.dart';
 import 'package:twitch_design/product/const/string_data.dart';
@@ -61,7 +62,11 @@ class WelcomeColumn extends StatelessWidget {
                 style: context.textTheme.bodyMedium
                     ?.copyWith(color: ColorData.fuchsiaBlue),
               ),
-              onPressed: () {}),
+              onPressed: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => const SignInView(),
+                ));
+              }),
         ),
       ],
     );

@@ -21,11 +21,23 @@ class MyApp extends StatelessWidget {
             fontStyle: FontStyle.normal,
             fontSize: 30.0,
           ),
+          titleMedium: GoogleFonts.montserrat(
+            color: const Color(0xff000000),
+            fontWeight: FontWeight.w600,
+            fontStyle: FontStyle.normal,
+            fontSize: 28.0,
+          ),
           bodyMedium: GoogleFonts.montserrat(
             color: const Color(0xffffffff),
             fontWeight: FontWeight.w500,
             fontStyle: FontStyle.normal,
             fontSize: 24.0,
+          ),
+          bodySmall: GoogleFonts.montserrat(
+            color: const Color(0xff000000),
+            fontWeight: FontWeight.w400,
+            fontStyle: FontStyle.normal,
+            fontSize: 18.0,
           ),
         ),
       ),
