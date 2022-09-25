@@ -8,7 +8,7 @@ class TextFieldWithLabel extends Column {
     Key? key,
     required Text label,
     required TextEditingController controller,
-    required icon,
+    Widget? icon,
     bool isSecure = false,
     Widget? suffix,
     required textStyle,
@@ -50,7 +50,7 @@ class CustomTextFormField extends TextFormField {
   CustomTextFormField({
     Key? key,
     required TextEditingController controller,
-    required Widget icon,
+    required Widget? icon,
     required TextStyle? style,
     required void Function(String value) listener,
     required String? Function(String? value) validator,

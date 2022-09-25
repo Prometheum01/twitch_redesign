@@ -25,9 +25,14 @@ dependencies:
 
   #Core
   equatable: ^2.0.5
+  intl: ^0.17.0
 
   #State Management
   provider: ^6.0.3  
+
+  #Inputters
+  intl_phone_number_input: ^0.7.1
+  flutter_datetime_picker: ^1.5.1
 
 dev_dependencies:
   flutter_test:

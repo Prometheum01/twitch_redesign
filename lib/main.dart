@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:twitch_design/features/landing_page/landing_page_view.dart';
 import 'package:twitch_design/features/select_category_page/provider/category_provider.dart';
-import 'package:twitch_design/product/const/color_data.dart';
+import 'package:twitch_design/features/sign_up_page/provider/sign_up_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,14 +19,14 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (context) => CategoryProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (context) => SignUpProvider(),
+        ),
       ],
       child: MaterialApp(
         title: 'Twitch',
         theme: ThemeData(
-          textButtonTheme: TextButtonThemeData(
-              style: TextButton.styleFrom(
-            onSurface: ColorData.purplishBlue,
-          )),
+          
           textTheme: TextTheme(
             headlineLarge: GoogleFonts.roboto(
                 color: const Color(0xff000000),

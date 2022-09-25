@@ -8,4 +8,5 @@ class ColorData {
   static const butterflyBush = Color(0xFF65459b);
   static const osloGrey = Color(0xFF8f8f8f);
   static const softPeach = Color(0xFFeeeeee);
+  static const lightLavender = Color(0xFFd8c1ff);
 }

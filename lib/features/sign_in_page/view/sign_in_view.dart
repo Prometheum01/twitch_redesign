@@ -4,6 +4,7 @@ import 'package:kartal/kartal.dart';
 import 'package:twitch_design/core/const/borders.dart';
 import 'package:twitch_design/core/const/paddings.dart';
 import 'package:twitch_design/features/sign_in_page/view_model/sign_in_view_model.dart';
+import 'package:twitch_design/features/sign_up_page/view/sign_up_page_view.dart';
 import 'package:twitch_design/product/const/color_data.dart';
 import 'package:twitch_design/product/const/string_data.dart';
 import 'package:twitch_design/product/widgets/custom_text_field.dart';
@@ -46,7 +47,9 @@ class _SignInViewState extends SignInViewModel {
                           ),
                         ),
                         validator: ((value) {
-                          if (!value.isValidEmail) return 'Please write email';
+                          if (!value.isValidEmail) {
+                            return StringData.pleaseWriteEmail;
+                          }
                           return null;
                         }),
                         icon: const Icon(Icons.email_outlined,
@@ -68,7 +71,7 @@ class _SignInViewState extends SignInViewModel {
                           ),
                           validator: ((value) {
                             if (!value.isValidPassword) {
-                              return 'Write strong password';
+                              return StringData.writeStrongPassword;
                             }
                             return null;
                           }),
@@ -76,7 +79,7 @@ class _SignInViewState extends SignInViewModel {
                               color: Colors.black),
                           suffix: IconButton(
                             onPressed: () {
-                              changePasswordVisibility();
+                              changeVisibility();
                             },
                             icon: Icon(
                               isVisible
@@ -201,7 +204,14 @@ class _RegisterText extends StatelessWidget {
         children: [
           TextSpan(
             text: StringData.registerHere,
-            recognizer: TapGestureRecognizer()..onTap = () {},
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const SignUpPageView(),
+                  ),
+                );
+              },
             style: context.textTheme.bodySmall?.copyWith(
                 fontSize: 16,
                 color: ColorData.butterflyBush,
