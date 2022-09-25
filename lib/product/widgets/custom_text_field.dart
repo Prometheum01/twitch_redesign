@@ -76,10 +76,10 @@ class CustomTextFormField extends TextFormField {
 }
 
 class TextFieldContainerDecoration extends BoxDecoration {
-  TextFieldContainerDecoration()
+  TextFieldContainerDecoration({Color backgroundColor = ColorData.desertStorm})
       : super(
           borderRadius: const ProjectBorders.smallAll(),
-          color: ColorData.desertStorm,
+          color: backgroundColor,
           boxShadow: [
             const BoxShadow(
                 color: ColorData.boxShadowColor,

@@ -8,6 +8,7 @@ import 'package:twitch_design/product/const/color_data.dart';
 import 'package:twitch_design/product/const/string_data.dart';
 import 'package:twitch_design/product/widgets/custom_text_field.dart';
 import 'package:twitch_design/product/widgets/general_button.dart';
+import 'package:twitch_design/product/widgets/title_with_sub.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({Key? key}) : super(key: key);
@@ -28,16 +29,9 @@ class _SignInViewState extends SignInViewModel {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  StringData.signIn,
-                  style: context.textTheme.titleMedium,
-                ),
-                Padding(
-                  padding: const ProjectPaddings.smallTopBigBottom(),
-                  child: Text(
-                    StringData.signInToContinue,
-                    style: context.textTheme.bodySmall,
-                  ),
+                const TitleWithSub(
+                  title: StringData.signIn,
+                  subtitle: StringData.signInToContinue,
                 ),
                 Form(
                   key: formKey,

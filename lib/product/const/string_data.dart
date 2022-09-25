@@ -14,6 +14,12 @@ class StringData {
   static const dontHaveAccount = "Don't have an account?";
   static const registerHere = 'Register Here';
 
+  //Select Category Page
+  static const selectCategory = 'Select Category';
+  static const chooseGame = 'Choose the game you like';
+  static const imReady = "I'm Ready";
+  static const skip = 'Skip';
+
   //Sign Up Page
 
   //Home Page

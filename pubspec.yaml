@@ -14,11 +14,20 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
+  #Animation
+
+
   #Shortcuts
   kartal: ^2.4.3
 
   #Google
   google_fonts: ^3.0.1
+
+  #Core
+  equatable: ^2.0.5
+
+  #State Management
+  provider: ^6.0.3  
 
 dev_dependencies:
   flutter_test:
@@ -32,3 +41,4 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/lotties/

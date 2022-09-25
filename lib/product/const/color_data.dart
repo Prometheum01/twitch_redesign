@@ -6,4 +6,6 @@ class ColorData {
   static const desertStorm = Color(0xFFf8f8f8);
   static const boxShadowColor = Color(0x40000000);
   static const butterflyBush = Color(0xFF65459b);
+  static const osloGrey = Color(0xFF8f8f8f);
+  static const softPeach = Color(0xFFeeeeee);
 }
