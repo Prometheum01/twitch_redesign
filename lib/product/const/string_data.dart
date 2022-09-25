@@ -41,6 +41,13 @@ class StringData {
   static const termsThirdText = ' and';
   static const termsFourthText = ' Privacy Notice';
 
+  //Verify Email Page
+  static const verifyEmail = 'Verify your email address';
+  static const firstEmailVerify = 'We have sent you email to ';
+  static const secondEmailVerify =
+      'Please, check your mail to get yourself into us';
+  static const backToLogin = 'Back to Login';
+
   //Home Page
 
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:twitch_design/features/home_page/view/home_page_view.dart';
 import 'package:twitch_design/features/sign_up_page/view/sign_up_page_view.dart';
+import 'package:twitch_design/features/verify_email_page/view/verify_email_view.dart';
 import 'package:twitch_design/product/mixin/password_visibility.dart';
 
 abstract class SignUpPageViewModel extends State<SignUpPageView>
@@ -26,7 +26,7 @@ abstract class SignUpPageViewModel extends State<SignUpPageView>
     if (formKey.currentState!.validate()) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => const HomePageView(),
+          builder: (context) => const VerifyEmailView(),
         ),
       );
     }
