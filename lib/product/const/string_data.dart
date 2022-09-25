@@ -20,6 +20,10 @@ class StringData {
   static const imReady = "I'm Ready";
   static const skip = 'Skip';
 
+  //Welcome Page
+  static const welcomeToTwitch = 'Welcome to Twitch!!';
+  static const liveStreamNow = 'Livestream Now!';
+
   //Sign Up Page
 
   //Home Page

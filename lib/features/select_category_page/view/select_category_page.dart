@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 import 'package:twitch_design/core/const/paddings.dart';
 import 'package:twitch_design/features/select_category_page/view_model/select_category_view_model.dart';
-import 'package:twitch_design/features/welcome_page/view/welcom_page.dart';
+import 'package:twitch_design/features/welcome_page/view/welcome_page.dart';
 import 'package:twitch_design/product/const/color_data.dart';
 import 'package:twitch_design/product/const/string_data.dart';
 import 'package:twitch_design/product/widgets/category_grid_view.dart';

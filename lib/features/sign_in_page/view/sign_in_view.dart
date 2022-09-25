@@ -47,15 +47,14 @@ class _SignInViewState extends SignInViewModel {
                         ),
                         validator: ((value) {
                           if (!value.isValidEmail) return 'Please write email';
+                          return null;
                         }),
                         icon: const Icon(Icons.email_outlined,
                             color: Colors.black),
                         textStyle: context.textTheme.bodySmall?.copyWith(
                           fontSize: 16,
                         ),
-                        onChanged: (String value) {
-                          print(value);
-                        },
+                        onChanged: (String value) {},
                       ),
                       Padding(
                         padding: const ProjectPaddings.largeVertical(),
@@ -71,6 +70,7 @@ class _SignInViewState extends SignInViewModel {
                             if (!value.isValidPassword) {
                               return 'Write strong password';
                             }
+                            return null;
                           }),
                           icon: const Icon(Icons.password_outlined,
                               color: Colors.black),
@@ -89,9 +89,7 @@ class _SignInViewState extends SignInViewModel {
                           textStyle: context.textTheme.bodySmall?.copyWith(
                             fontSize: 16,
                           ),
-                          onChanged: (String value) {
-                            print(value);
-                          },
+                          onChanged: (String value) {},
                         ),
                       ),
                     ],
@@ -100,9 +98,7 @@ class _SignInViewState extends SignInViewModel {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    RememberRow(onChanged: (value) {
-                      print(value);
-                    }),
+                    RememberRow(onChanged: (value) {}),
                     GestureDetector(
                       onTap: () {},
                       child: Text(
