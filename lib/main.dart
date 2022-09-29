@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Twitch',
         theme: ThemeData(
-          
           textTheme: TextTheme(
             headlineLarge: GoogleFonts.roboto(
                 color: const Color(0xff000000),
@@ -38,6 +37,11 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 fontStyle: FontStyle.normal,
                 fontSize: 18.0),
+            headlineSmall: GoogleFonts.roboto(
+                color: const Color(0xff000000),
+                fontWeight: FontWeight.w300,
+                fontStyle: FontStyle.normal,
+                fontSize: 10.0),
             titleLarge: GoogleFonts.montserrat(
               color: const Color(0xffffffff),
               fontWeight: FontWeight.w700,

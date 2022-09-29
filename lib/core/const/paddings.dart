@@ -22,4 +22,9 @@ class ProjectPaddings extends EdgeInsets {
   const ProjectPaddings.customTextField()
       : super.symmetric(horizontal: 16, vertical: 8);
   const ProjectPaddings.smallTopBigBottom() : super.only(top: 8, bottom: 48);
+
+  ProjectPaddings.smallestVerticalLargeHorizontal()
+      : super.symmetric(
+            vertical: const ProjectPaddings.smallVertical().vertical / 2,
+            horizontal: const ProjectPaddings.largeHorizontal().horizontal);
 }

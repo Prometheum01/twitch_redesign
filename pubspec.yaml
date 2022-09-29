@@ -47,3 +47,6 @@ flutter:
   assets:
     - assets/images/
     - assets/lotties/
+    - assets/games/
+    - assets/live_background/
+    - assets/streamers/

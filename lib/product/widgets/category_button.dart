@@ -7,6 +7,55 @@ import 'package:twitch_design/product/const/color_data.dart';
 import 'package:twitch_design/product/model/category_model.dart';
 import 'package:twitch_design/product/widgets/custom_text_field.dart';
 
+import '../../core/const/borders.dart';
+
+class CategoryButtonWithIcon extends StatelessWidget {
+  const CategoryButtonWithIcon({
+    Key? key,
+    required this.categoryText,
+    required this.icon,
+    required this.onPressed,
+  }) : super(key: key);
+
+  final String categoryText;
+  final IconData icon;
+  final Function onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        onPressed();
+      },
+      borderRadius: const ProjectBorders.smallAll(),
+      child: Ink(
+        height: context.dynamicHeight(0.075),
+        decoration: const BoxDecoration(
+          borderRadius: ProjectBorders.smallAll(),
+          color: Color(0xff6711fe),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              categoryText,
+              style: context.textTheme.headlineLarge?.copyWith(
+                color: Colors.white,
+                fontSize: 18,
+              ),
+            ),
+            Icon(
+              icon,
+              color: Colors.white,
+              size: 36,
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class CategoryButton extends StatefulWidget {
   const CategoryButton({
     Key? key,

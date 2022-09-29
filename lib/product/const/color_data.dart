@@ -9,4 +9,5 @@ class ColorData {
   static const osloGrey = Color(0xFF8f8f8f);
   static const softPeach = Color(0xFFeeeeee);
   static const lightLavender = Color(0xFFd8c1ff);
+  static const mercury = Color(0xFFe6e6e6);
 }

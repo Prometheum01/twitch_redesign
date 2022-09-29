@@ -51,7 +51,13 @@ class _SkipButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const WelcomePage(),
+            ),
+          );
+        },
         child: Text(
           StringData.skip,
           style: context.textTheme.bodySmall?.copyWith(
@@ -81,9 +87,11 @@ class _ImReadyButton extends StatelessWidget {
         ),
         backgroundColor: ColorData.purplishBlue,
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => const WelcomePage(),
-          ));
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const WelcomePage(),
+            ),
+          );
         },
       ),
     );

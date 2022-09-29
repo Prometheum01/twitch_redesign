@@ -48,6 +48,18 @@ class StringData {
       'Please, check your mail to get yourself into us';
   static const backToLogin = 'Back to Login';
 
+  //Main Page
+
+  static const discoverLabel = 'Discover';
+  static const notificationLabel = 'Notification';
+  static const chatLabel = 'Chat';
+  static const profileLabel = 'Profile';
+
   //Home Page
 
+  static const recommendedLiveChannels = 'Recommended Live Channels';
+  static const category = 'Category';
+  static const more = 'More';
+  static const popularCategoriesFirst = 'Popular';
+  static const popularCategoriesSecond = 'Categories';
 }

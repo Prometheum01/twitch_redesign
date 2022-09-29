@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:twitch_design/core/const/paddings.dart';
-import 'package:twitch_design/features/home_page/view/home_page_view.dart';
 import 'package:twitch_design/product/const/color_data.dart';
 import 'package:twitch_design/product/const/image_paths.dart';
 import 'package:twitch_design/product/const/string_data.dart';
 import 'package:kartal/kartal.dart';
+
+import '../../main_page/view/main_page_view.dart';
 
 class VerifyEmailView extends StatefulWidget {
   const VerifyEmailView({super.key});
@@ -45,7 +46,7 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
                   onPressed: () {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (context) => const HomePageView(),
+                        builder: (context) => const MainPageView(),
                       ),
                     );
                   },
