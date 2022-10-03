@@ -43,7 +43,7 @@ class PhoneNumberInput extends StatelessWidget {
               validator: (String? value) {
                 if (value != null) {
                   if (value.trim().isEmpty) {
-                    return 'Please write email';
+                    return 'Please write number';
                   }
                 }
                 return null;

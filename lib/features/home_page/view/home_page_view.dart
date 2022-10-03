@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 import 'package:twitch_design/core/const/paddings.dart';
-import 'package:twitch_design/features/game_detail_page/view/game_detail_page_view.dart';
 import 'package:twitch_design/product/const/color_data.dart';
 import 'package:twitch_design/product/const/dummy_lists.dart';
 import 'package:twitch_design/product/const/image_paths.dart';
 import 'package:twitch_design/product/const/string_data.dart';
 import 'package:twitch_design/product/model/category_model.dart';
+import 'package:twitch_design/product/model/game_model.dart';
 
 import '../../../product/widgets/category_button.dart';
 import '../../../product/widgets/live_content.dart';
@@ -56,16 +56,9 @@ class _HomePageViewState extends State<HomePageView> {
                   separatorBuilder: (context, _) =>
                       const Padding(padding: ProjectPaddings.smallHorizontal()),
                   itemBuilder: (context, index) => PopularCategoryWidget(
-                    tag: 'Cod$index',
+                    tag: GameModel.dummyGameModelList[index].id,
                     image: DummyGameList.dummyList[index],
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              GameDetailPageView(tag: 'Cod$index'),
-                        ),
-                      );
-                    },
+                    onPressed: () {},
                   ),
                 ),
               )

@@ -18,7 +18,7 @@ class LiveContentListView extends StatelessWidget {
         itemCount: LiveContentModel.dummyLiveContentList.length,
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
-        separatorBuilder: (context, index) => Padding(
+        separatorBuilder: (context, index) => const Padding(
           padding: ProjectPaddings.smallHorizontal(),
         ),
         itemBuilder: (context, index) => LiveContent(

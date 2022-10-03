@@ -61,36 +61,6 @@ class _SignUpPageViewState extends SignUpPageViewModel {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Padding(
-                                padding:
-                                    const ProjectPaddings.smallHorizontal(),
-                                child: Text(
-                                  'Strong',
-                                  style: context.textTheme.bodySmall?.copyWith(
-                                    color: Color(0xFF63ff2c),
-                                    fontSize: 13,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: context.dynamicWidth(0.25),
-                                height: context.dynamicHeight(0.0125),
-                                color: ColorData.lightLavender,
-                                child: Align(
-                                  alignment: Alignment.centerRight,
-                                  child: AnimatedContainer(
-                                    duration: context.durationNormal,
-                                    width: context.dynamicWidth(0.2),
-                                    height: context.dynamicHeight(0.0125),
-                                    color: ColorData.purplishBlue,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
                           TextFieldWithLabel(
                             controller: passwordController,
                             label: Text(
@@ -149,6 +119,46 @@ class _SignUpPageViewState extends SignUpPageViewModel {
           ),
         ),
       ),
+    );
+  }
+}
+
+// ignore: unused_element
+class _PasswordStage extends StatelessWidget {
+  const _PasswordStage({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Padding(
+          padding: const ProjectPaddings.smallHorizontal(),
+          child: Text(
+            'Strong',
+            style: context.textTheme.bodySmall?.copyWith(
+              color: const Color(0xFF63ff2c),
+              fontSize: 13,
+            ),
+          ),
+        ),
+        Container(
+          width: context.dynamicWidth(0.25),
+          height: context.dynamicHeight(0.0125),
+          color: ColorData.lightLavender,
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: AnimatedContainer(
+              duration: context.durationNormal,
+              width: context.dynamicWidth(0.2),
+              height: context.dynamicHeight(0.0125),
+              color: ColorData.purplishBlue,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
