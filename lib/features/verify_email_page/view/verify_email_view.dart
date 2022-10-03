@@ -24,6 +24,7 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
         child: Padding(
           padding: const ProjectPaddings.largeAll(),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 StringData.verifyEmail,
